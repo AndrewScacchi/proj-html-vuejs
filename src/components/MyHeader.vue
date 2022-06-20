@@ -2,13 +2,14 @@
   <div id="header" class="flex-row">
     <img id="logo" src="../assets/images/logo.png" alt="logoFable">
     <nav class="flex-row">
-      <a href="" class="flex-col">
+      <!-- <a href="" class="flex-col">
         <img src="../assets/img/home.png" alt="icn">
         <span>Home</span>
-      </a>
+      </a> -->
 
+      <!-- dynamic navLink.. to add dinamic links to page sections -->
       <a v-for="(navLink, i) in navLinks" :key="i" href="#" class="flex-col">
-        <img :src="navLink.img" alt="icn">
+        <img :src="navLink.img" :alt="navLink.text">
         <span>{{navLink.text}}</span>
       </a>
 
@@ -33,7 +34,35 @@ export default {
           text: "Pages",
           img: require("../assets/img/document.png"),
           imgHover: require("../assets/img/document-2.png")
+        },
+        {
+          text: "Blog",
+          img: require("../assets/img/printer.png"),
+          imgHover: require("../assets/img/printer-2.png")
+        },
+        {
+          text: "Shop",
+          img: require("../assets/img/cart.png"),
+          imgHover: require("../assets/img/cart-2.png")
+        },
+        {
+          text: "Shortcodes",
+          img: require("../assets/img/lab.png"),
+          imgHover: require("../assets/img/lab-2.png")
+        },
+        {
+          text: "Support",
+          img: require("../assets/img/chat.png"),
+          imgHover: require("../assets/img/chat-2.png")
+        },
+        {
+          text: "Contact",
+          img: require("../assets/img/envelope.png"),
+          imgHover: require("../assets/img/envelope-2.png")
         }
+
+
+
       ]
     }
   }
@@ -62,20 +91,22 @@ export default {
     height: 100%;
   }
 nav{
-  gap:10px;
-
+  background-color: white;
   a{
-    // display: inline-block;
     height: 100px;
     text-decoration: none;
+    color: #444275;
 
     gap: 5px;
     
     justify-content: center;
     align-items: center;
     padding: 0 20px;
+    img{
+      height: 25px;
+    }
   
-    // on hover nav link change color but we need to change icons too, create a dabatase i must
+    // on hover nav link change color but we need to swap icons too
     &:hover{
       background-color: #fe6601;
       color: white;
