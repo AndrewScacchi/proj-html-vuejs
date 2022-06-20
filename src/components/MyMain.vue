@@ -1,18 +1,26 @@
 <template>
   <main id="main">
     <MyJumboTron/>
+    <WelcomeToFable/>
+    <GoogleMap/>
     <ContactUs/>
   </main>
 </template>
 
 <script>
 import MyJumboTron from './minor/MyJumboTron.vue';
+import WelcomeToFable from './minor/WelcomeToFable.vue';
+import GoogleMap from './minor/GoogleMap.vue';
 import ContactUs from './minor/ContactUs.vue';
+
+
 export default {
   name: 'MyMain',
   components: {
     MyJumboTron,
-    ContactUs
+    WelcomeToFable,
+    GoogleMap,
+    ContactUs,
 }
 }
 </script>

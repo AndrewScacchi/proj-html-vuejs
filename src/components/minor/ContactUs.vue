@@ -1,9 +1,12 @@
 <template>
 <!-- creating a Jumbotron with img and file in flex -->
   <div id="contactUs" class="flex-col">
+
+
     <div class="contact-title flex-col">
       <h1>Contact Us</h1>
       <h5>Our contact adress and contact details</h5>
+      <img src="../../assets/images/header_divider.png" alt="">
 
     </div>
     <div class="contact-links flex-row">
@@ -39,42 +42,7 @@
 
 <script>
 export default {
-  name: 'ContactUs',
-  data(){
-    return{
-      contactLinks: [
-        {
-          img: require("../../assets/images/envelope (1).png"),
-          title: "Postal Adress",
-          line1: "Fable Car Center",
-          line2:"85 Fentiman Ave",
-          line3:"Ottawa, ON K15 0T7",
-        },
-        {
-          img: require("../../assets/images/mobile.png"),
-          title: "Phone & E-mail",
-          line1: "Phone: 1-800-64-38",
-          line2:"Fax: 1-800-64-39",
-          line3:"",
-          contentLink:"office@fable.com"
-        },
-        {
-          img: require("../../assets/images/clock.png"),
-          title: "Business Hours",
-          line1: "Monday - Friday",
-          line2:"8.00 am - 5.00 pm",
-          line3:"Weekend Closed",
-        },
-        {
-          img: require("../../assets/images/document (1).png"),
-          title: "Sessions",
-          line1: "Morning: 8 am - 12 noon",
-          line2:"Afternoon: 1 pm - 5 pm",
-          line3:"Full Day : 8 am - 5 pm",
-        },
-      ]
-    }
-  }
+  name: 'WelcomeToFable',
 }
 </script>
 
@@ -91,6 +59,9 @@ export default {
   .contact-title{
     justify-content: center;
     align-items: center;
+    img{
+        margin: 20px auto;
+    }
   }
   .contact-links{
     justify-content: center;
