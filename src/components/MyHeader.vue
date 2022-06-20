@@ -109,7 +109,7 @@ nav{
     // on hover nav link change color but we need to swap icons too
     &:hover{
       background-color: #fe6601;
-      color: white;
+      color: #fefffe;
     }
 
   }
