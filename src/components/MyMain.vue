@@ -2,6 +2,7 @@
   <main id="main">
     <MyJumboTron/>
     <WelcomeToFable/>
+    <OurClasses/>
     <GoogleMap/>
     <ContactUs/>
   </main>
@@ -10,6 +11,7 @@
 <script>
 import MyJumboTron from './minor/MyJumboTron.vue';
 import WelcomeToFable from './minor/WelcomeToFable.vue';
+import OurClasses from './minor/OurClasses.vue';
 import GoogleMap from './minor/GoogleMap.vue';
 import ContactUs from './minor/ContactUs.vue';
 
@@ -19,6 +21,7 @@ export default {
   components: {
     MyJumboTron,
     WelcomeToFable,
+    OurClasses,
     GoogleMap,
     ContactUs,
 }

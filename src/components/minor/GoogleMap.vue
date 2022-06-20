@@ -1,8 +1,7 @@
 <template>
-<!-- building a bigger img from smallers -->
+<!-- just an img of a googleMaps prompt -->
 <div id="google-images">
-    <img v-for="(image, i ) in googleMaps" :key="i" :src="image.img" alt="">
-
+    <img src="../../assets/img/googleMaps-full.png" alt="">
 </div>
  
 </template>
@@ -10,27 +9,6 @@
 <script>
 export default {
   name: 'GoogleMap',
-  data(){
-    return{
-        googleMaps: [
-            {
-                text: "vt(1)",
-                img: require("../../assets/img/googleMaps/vt (1).png"),
-            },
-            {
-                img: require("../../assets/img/googleMaps/vt (2).png"),
-            },
-             {
-                img: require("../../assets/img/googleMaps/vt (3).png"),
-            },
-            {
-                img: require("../../assets/img/googleMaps/vt (4).png"),
-            },
-            
-            
-        ]
-    }
-  }
 }
 </script>
 
@@ -39,8 +17,10 @@ export default {
 
 #google-images{
     width: 100%;
-    height: 300px;
-    background-color: grey;
+    img{
+        width: 100%;
+    }
 }
+
 
 </style>

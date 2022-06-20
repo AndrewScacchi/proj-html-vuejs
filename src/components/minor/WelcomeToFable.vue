@@ -5,7 +5,7 @@
 
     <div class="title flex-col">
       <h1>Welcome to Fable</h1>
-      <h5>Our contact adress and contact details</h5>
+      <h4>Our contact adress and contact details</h4>
       <img src="../../assets/images/header_divider.png" alt="">
 
     </div>
@@ -15,34 +15,71 @@
             <div class="round round-orange">
                 <img src="../../assets/images/globe_alt.png" alt="">
             </div>
-            <h4>Morbi Etos</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga rerum corrupti, odit aspernatur illum harum fugiat illo at laudantium asperiores nisi</p>
+            <h3>Morbi Etos</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  at laudantium asperiores nisi</p>
         </div>
         <div class="card">
             <div class="round round-blue">
                 <img src="../../assets/images/stroller_alt.png" alt="">
             </div>
-            <h4>Congue Gravidas</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga rerum corrupti, odit aspernatur illum harum fugiat illo at laudantium asperiores nisi</p>
+            <h3>Congue Gravidas</h3>
+            <p> Ipsum fuga rerum corrupti, odit aspernatur illum harum fugiat illo at laudantium asperiores nisi</p>
         </div>
         <div class="card">
             <div class="round round-orange">
                 <img src="../../assets/images/bell_alt.png" alt="">
             </div>
-            <h4>Maecenas Node</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga rerum corrupti, odit aspernatur illum harum fugiat illo at laudantium asperiores nisi</p>
+            <h3>Maecenas Node</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga rerum corrupti,laudantium asperiores nisi</p>
         </div>
         <div class="card">
             <div class="round round-blue">
                 <img src="../../assets/images/globe_alt.png" alt="">
             </div>
-            <h4>Praesent Morbi</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga rerum corrupti, odit aspernatur illum harum fugiat illo at laudantium asperiores nisi</p>
+            <h3>Praesent Morbi</h3>
+            <p>Ipsum fuga rerum corrupti, odit aspernatur illum harum fugiat illo at laudantium asperiores nisi</p>
         </div>
     
     </section>
-    <section class="flex-row main-b">
-    
+    <section class="main-b">
+        <div class="section-container flex-row">
+            <!-- left div -->
+            <div class="section-left flex-col">
+                <div class="left-icon flex-row">
+                    <div class="btn btn-orange">Overwiew</div>
+                    <div class="btn btn-orange" >Our Mission</div>
+                </div>
+                <h2 class="left-title">Our philosphy is learning through play as we offer a stimulating enviroment for children. </h2>
+                <div class="smallCard flex-row">
+                    <div class="smallCard-img">
+                        <img src="../../assets/images/clock_alt.png" alt="">
+                    </div>
+                    <div class="smallCard-text">                       
+                        <h3>placeholder</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque tempore dicta blanditiis pariatur, amet.</p>
+                    </div>
+
+                </div>
+                <div class="smallCard flex-row">
+                    <div class="smallCard-img">
+                        <img src="../../assets/images/clock_alt.png" alt="">
+                    </div>
+                    <div class="smallCard-text">                       
+                        <h3>placeholder</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque tempore dicta blanditiis pariatur, amet.</p>
+                    </div>
+
+                </div>
+                
+
+            </div>
+            <!-- right div -->
+            <div class="section-right">
+
+            </div>
+            
+        </div>
+
     </section>
     
     
@@ -63,7 +100,6 @@ export default {
 #WelcomeToFable{
   width: 100%;
   margin: 0 auto;
-  min-height: 200px;
   padding: 25px 0 75px;
   align-items: center;
   justify-content: space-around;
@@ -81,7 +117,23 @@ export default {
     width: 100%;
     padding: 25px 15%;
     gap: 5%;
-   
+    .section-container {
+        width: 100%;
+        padding: 0 15%;
+        
+        .section-left, .section-right{
+            
+            width: 50%;
+            //debug
+            border: 1px solid blue;
+        }
+        .section-left {
+            padding: 20px ;
+        }
+        
+    }
+
+    
     //debug
     min-height: 200px;
     background-color: white;
@@ -94,7 +146,7 @@ export default {
     img{
       height: 60px;
     }
-    h4 {
+    h3 {
       margin: 10px 0;
       font-weight: bold;
     }
@@ -104,10 +156,12 @@ export default {
   }
   }
   .main-b{
-    background-color: grey;
+    padding: 25px;
+    background-color: #f5f5f5;
   }
-
-    .round{
+  
+}
+.round{
         border-radius: 50%;
         height: 150px;
         width: 150px; 
@@ -123,7 +177,22 @@ export default {
         }
         
     }
-  
+
+.smallCard {
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    .smallCard-img{
+        background: #fe6601;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
 }
 
 </style>

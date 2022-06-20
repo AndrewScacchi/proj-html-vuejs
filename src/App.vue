@@ -18,27 +18,26 @@ export default {
 }
 }
 </script>
-
 <style lang="scss">
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // border: 1px solid red;
 }
 .flex-row{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .flex-col{
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .btn {
   border:none;
-  padding:15px;
+  padding: 10px 15px;
   font-size: 0.75rem;
 }
 .btn-orange {

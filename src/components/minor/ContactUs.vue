@@ -90,6 +90,7 @@ export default {
     width: 100%;
     height: 100px;
     gap: 2%;
+    flex-wrap: wrap;
     div {
       width: 49%;
       justify-content: space-between;
