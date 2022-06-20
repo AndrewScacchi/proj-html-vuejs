@@ -7,7 +7,6 @@
           <h1>placeholder</h1>
           
         </div>
-        <img class="jumboImg" src="../../../src/assets/placeholder/placeholder-jumbo.jpg" alt="">
 
     </section>
     

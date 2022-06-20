@@ -24,6 +24,16 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid red;
+  // border: 1px solid red;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 </style>
