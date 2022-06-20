@@ -1,16 +1,18 @@
 <template>
   <main id="main">
     <MyJumboTron/>
-    
+    <ContactUs/>
   </main>
 </template>
 
 <script>
 import MyJumboTron from './minor/MyJumboTron.vue';
+import ContactUs from './minor/ContactUs.vue';
 export default {
   name: 'MyMain',
   components: {
-    MyJumboTron
+    MyJumboTron,
+    ContactUs
 }
 }
 </script>
