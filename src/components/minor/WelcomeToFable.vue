@@ -87,13 +87,7 @@
                 </div>
                 <!-- gallery at the bottom -->
                 <div class="img-gallery flex-row">
-                    <img v-for="(img, i) in imgGallery" :key="i" :src="img.img" alt="" >
-                    
-                    <!-- this ternary should active a class -->
-                    <!-- :class="isActive ? 'bottomBorder' : '' " -->
-
-
-            
+                    <img class="bottomBorder" v-for="(img, i) in imgGallery" :key="i" :src="img.img" alt="" :class="i === activeImg ? 'bottomBorderActive' : '' " >
                 </div>
                 
             </div>
@@ -207,7 +201,7 @@ setInterval(() => {
   }
   .main-b{
     padding: 25px;
-    background-color: #f5f5f5;
+    background-color: $darkWhite;
   }
   
 }
@@ -278,6 +272,10 @@ setInterval(() => {
 }
 // this class should be given on the active element..
 .bottomBorder {
+    border-bottom: 2px solid $darkWhite;
+    padding-bottom: 10px
+}
+.bottomBorderActive {
     border-bottom: 2px solid $blazeOrange;
     padding-bottom: 10px
 }

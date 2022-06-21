@@ -78,13 +78,6 @@ export default {
     }
   }
 }
- 
-    
-//i need to create a database with all the nav link, text,img img2 and i need to create a function for hover functionality
-
-
-
-
 
 </script>
 
@@ -110,14 +103,11 @@ export default {
 nav{
   background-color: $white;
   a{
+    @include flex-centered;
     height: 100px;
     text-decoration: none;
     color: $darkBlue;
-
     gap: 5px;
-    
-    justify-content: center;
-    align-items: center;
     padding: 0 20px;
     img{
       height: 25px;

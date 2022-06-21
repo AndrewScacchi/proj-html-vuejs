@@ -52,10 +52,9 @@ export default {
        
 
 
-        .jumboText{
+        .jumboText{       
           align-self: center;
           justify-content: center;
-          // align-items: center;
           text-align: left;
           width: 30%;
           margin-left: 15%;
@@ -72,7 +71,7 @@ export default {
             font-weight: lighter;
           }
           h3{
-            color: #fe6601;
+            color: $blazeOrange;
             font-weight: lighter;
             font-size: 1.5em;
             // ahahah
@@ -92,7 +91,7 @@ export default {
         
     }
     section.blueBar {
-      background: #56509f;
+      background: $darkBlue;
       height: 100px;
       width: 100%;
       padding: 0 15%;
@@ -100,7 +99,7 @@ export default {
       justify-content: space-between;
       
       h2 {
-        color: #fefffe;
+        color: $sugarCane;
         font-size: 2rem;
         font-weight: lighter;
       }

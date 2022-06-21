@@ -30,14 +30,11 @@
 
         </div>
         <div class="bottom flex-row">
-                <div v-for="(item, i) in quoteList" :key="i" class="rectangle" ></div>
+                <div v-for="(item, i) in quoteList" :key="i" class="rectangle" :class="i === activeQuote ? 'rectangle-up' : '' " ></div>
+                <!-- non sapevo come fare e quindi ho letteralmenteo fatto copia e incolla, modificando dove necessario ed ha funzionato xD -->
 
         </div>
-
-
     </div>
-    <!-- bluebar -->
-    
 </div>
  
 </template>
@@ -53,33 +50,33 @@ export default {
             {
                 quoteText: "I have to say that i have 2 children ages 5 and 2 and have used various daycare's in Kindergartens and this is by far the best i have ever used",
                 quoteAuthor: "Cecil J. Kirk",
-                // visible: false,
+                visible: false,
             },
             {
                 quoteText: "If you are not yelling at your kids, you are not spending enought time with them",
                 quoteAuthor: "Reese Whiterspoon",
-                // visible: false,
+                visible: false,
             },
             
             {
                 quoteText: "Do or do not. There is no try",
                 quoteAuthor: "Jedi Master Yoda",
-                // visible: false,
+                visible: false,
             },
             {
                 quoteText: "This conversation has taken a turn for the moronic..",
                 quoteAuthor: "Dorian Pavus",
-                // visible: false,
+                visible: false,
             },
             {
                 quoteText: "Se hai paura di ingrassare, fai a meno di mangiare, non pensare a me mangerò per tre.. finche l'appetito c'è!",
                 quoteAuthor: "Asterix",
-                // visible: false,
+                visible: false,
             },
             {
                 quoteText: "If everything seems to be going well, you have obviously overlooked something.",
                 quoteAuthor: "from Murphy's Laws",
-                // visible: false,
+                visible: false,
             },
             
             
@@ -99,11 +96,14 @@ export default {
   methods: {
     nextQuote(){
                 this.activeQuote++;
+
+                // let index= this.activeQuote;
+                // this.quoteList[index].visible = true;
+                // console.log(this.quoteList[index].visible);
+
                 if(this.activeQuote > this.quoteList.length - 1){
-                    this.activeQuote = 0;
-                    
+                    this.activeQuote = 0;      
                 } 
-                
             },
   }
    
@@ -112,6 +112,8 @@ export default {
 setInterval(() => {
     document.getElementById("quote").click();
 }, 5000);
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -145,7 +147,7 @@ setInterval(() => {
         left: 0;
         background: url("../../assets/images/pattern.png");
         h2{
-            color: white;
+            color: $white;
         }
     }
     img{

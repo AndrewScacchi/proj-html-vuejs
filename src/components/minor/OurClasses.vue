@@ -190,7 +190,7 @@ export default {
         gap: 20px;
     }
     .main-b{
-        background-color: $darkwhite;
+        background-color: $darkWhite;
         padding: 50px 15%;
         gap: 0;
         div.left {
