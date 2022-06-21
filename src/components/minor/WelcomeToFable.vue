@@ -80,15 +80,20 @@
             <!-- right div -->
             <div class="section-right flex-col">
                 <div class="img-main">
-                    <img src="../../assets/images/gallery_08-690x506.jpg" alt="">
-                    <div class="btn btn-orange left">&lt;</div>
-                    <div class="btn btn-orange right">></div>
+                    <img :src="imgGallery[activeImg].img" alt="">
+                    <!-- <img src="../../assets/images/gallery_08-690x506.jpg" alt=""> -->
+                    <div class="btn btn-orange left" @click="prevImg">&lt;</div>
+                    <div class="btn btn-orange right" @click="nextImg">></div>
                 </div>
                 <!-- gallery at the bottom -->
                 <div class="img-gallery flex-row">
-                    <img src="../../assets/images/gallery_01.jpg" alt="">
-                    <img src="../../assets/images/gallery_02.jpg" alt="">
-                    <img src="../../assets/images/gallery_03.jpg" alt="">
+                    <img v-for="(img, i) in imgGallery" :key="i" :src="img.img" alt="" >
+                    
+                    <!-- this ternary should active a class -->
+                    <!-- :class="isActive ? 'bottomBorder' : '' " -->
+
+
+            
                 </div>
                 
             </div>
@@ -106,7 +111,44 @@
 <script>
 export default {
   name: 'WelcomeToFable',
- 
+    data(){
+        return{
+            activeImg: 0,
+            imgGallery: [
+                {
+                   img: require("../../assets/images/gallery_01.jpg"),
+                   isActive: false, 
+                },
+                {
+                   img: require("../../assets/images/gallery_02.jpg"),
+                   isActive: false, 
+                },
+                {
+                   img: require("../../assets/images/gallery_03.jpg"),
+                   isActive: false, 
+                },
+
+            ]
+        }
+    },
+    methods : {
+            nextImg(){
+                this.activeImg++;
+                if(this.activeImg > this.imgGallery.length - 1){
+                    this.activeImg = 0;
+                    // this.isActive = true;
+                } 
+                
+            },
+            prevImg(){
+                this.activeImg--;
+                if(this.activeImg < 0 ){
+                    this.activeImg = this.imgGallery.length - 1;
+                    // this.isActive = true;
+                }
+            },
+            
+    }
 }
 </script>
 
@@ -115,19 +157,8 @@ export default {
 @import "../../assets/css/style.scss";
 
 #welcomeToFable{
-  width: 100%;
-  margin: 0 auto;
-  padding: 25px 0;
-  align-items: center;
-  justify-content: space-around;
-  gap: 25px;
-  .title{
-    justify-content: center;
-    align-items: center;
-    img{
-        margin: 20px auto;
-    }
-  }
+    @include main-id-style;
+    padding: 25px 0;
   section{
     justify-content: center;
     align-items: center;
@@ -237,5 +268,11 @@ export default {
         right: 0;
         bottom: 50%;
     }
+}
+
+// this class should be given on the active element..
+.bottomBorder {
+    border-bottom: 2px solid $blazeOrange;
+    padding-bottom: 10px
 }
 </style>

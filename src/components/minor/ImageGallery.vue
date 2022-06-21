@@ -16,13 +16,20 @@
                 VIEW GALLERY >
             </div>
         </div>
-        <!-- <img src="../../assets/images/parallax_02.jpg" alt=""> -->
+        
+        <div class="quote flex-col">
+            <div class="quote-wrapper flex-col">
+                <img src="../../assets/images/quote_alt.png" alt="">
+            </div>
+
+            <p>I have to say that i have 2 children ages 5 and 2 and have used various daycare's in Kindergartens and this is by far the best i have ever used</p>
+            <span class="line"></span>
+            <span>Cecil J. Kirk</span>
+        </div>
 
     </div>
     <!-- bluebar -->
-    <div>
-        
-    </div>
+    
 </div>
  
 </template>
@@ -30,6 +37,31 @@
 <script>
 export default {
   name: 'ImageGallery',
+
+  data(){
+    return{
+        quoteList: [
+            {
+                quoteText: "placeholder1",
+                quoteAuthor: "Author1",
+                visible: false,
+            },
+            {
+                quoteText: "placeholder2",
+                quoteAuthor: "Author2",
+                visible: false,
+            },
+            
+            {
+                quoteText: "placeholder3",
+                quoteAuthor: "Author3",
+                visible: false,
+            },
+            
+            
+        ],
+    }
+  }
 }
 </script>
 
@@ -70,6 +102,43 @@ export default {
     img{
         width:100%
     }
+    .quote {
+        position:absolute;
+        width:100%;
+        height: calc(100% - 100px);
+        bottom: 0;
+        left: 0;
+        color: $white;
+        padding: 0 20%;
+        text-align: center;
+
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-size: 2em;
+            font-weight: lighter;
+        }
+        span.line {
+            content: "";
+            width: 50px;
+            border-top: 1px solid $white;
+            margin: 25px 0;
+        }
+
+        //debug
+        border: 1px solid black;
+
+    }
+    .quote-wrapper{
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-radius: 50%;
+        border: 2px solid $white;
+        margin-bottom: 25px;
+    }
 }
+
 
 </style>
