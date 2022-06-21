@@ -10,7 +10,7 @@
 
     </div>
     <section class="flex-row main-a">
-       
+        <!-- statyc cards -->
         <div class="card">
             <div class="round round-orange">
                 <img src="../../assets/images/schoolbag_alt.png" alt="">
@@ -50,32 +50,47 @@
                     <div class="btn btn-orange" >Our Mission</div>
                 </div>
                 <h2 class="left-title">Our philosphy is learning through play as we offer a stimulating enviroment for children. </h2>
-                <div class="smallCard flex-row">
-                    <div class="smallCard-img">
-                        <img src="../../assets/images/clock_alt.png" alt="">
-                    </div>
-                    <div class="smallCard-text">                       
-                        <h3>placeholder</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque tempore dicta blanditiis pariatur, amet.</p>
-                    </div>
+                <!-- small cards -->
+                <div class="left-smallCards"> 
+                    <div class="smallCard flex-row">
+                        <div class="smallCard-img">
+                            <img src="../../assets/images/clock_alt.png" alt="">
+                        </div>
+                        <div class="smallCard-text">                       
+                            <h3>placeholder</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque tempore dicta blanditiis pariatur, amet.</p>
+                        </div>
 
-                </div>
-                <div class="smallCard flex-row">
-                    <div class="smallCard-img">
-                        <img src="../../assets/images/clock_alt.png" alt="">
                     </div>
-                    <div class="smallCard-text">                       
-                        <h3>placeholder</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque tempore dicta blanditiis pariatur, amet.</p>
+                    
+                    <div class="smallCard flex-row">
+                        <div class="smallCard-img">
+                            <img src="../../assets/images/clock_alt.png" alt="">
+                        </div>
+                        <div class="smallCard-text">                       
+                            <h3>placeholder</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque tempore dicta blanditiis pariatur, amet.</p>
+                        </div>
                     </div>
-
                 </div>
+                
                 
 
             </div>
             <!-- right div -->
-            <div class="section-right">
-
+            <div class="section-right flex-col">
+                <div class="img-main">
+                    <img src="../../assets/images/gallery_08-690x506.jpg" alt="">
+                    <div class="btn btn-orange left">&lt;</div>
+                    <div class="btn btn-orange right">></div>
+                </div>
+                <!-- gallery at the bottom -->
+                <div class="img-gallery flex-row">
+                    <img src="../../assets/images/gallery_01.jpg" alt="">
+                    <img src="../../assets/images/gallery_02.jpg" alt="">
+                    <img src="../../assets/images/gallery_03.jpg" alt="">
+                </div>
+                
             </div>
             
         </div>
@@ -97,6 +112,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "../../assets/css/style.scss";
+
 #welcomeToFable{
   width: 100%;
   margin: 0 auto;
@@ -121,22 +138,19 @@ export default {
         width: 100%;
         padding: 0 15%;
         
-        .section-left, .section-right{
-            
+        .section-left, .section-right{         
             width: 50%;
-            //debug
-            border: 1px solid blue;
         }
         .section-left {
             padding: 20px ;
-        }
-        
-    }
+            gap: 20px;
+            justify-content: space-between;
 
-    
-    //debug
-    min-height: 200px;
-    background-color: white;
+        }
+        .section-right {
+            gap: 10px;
+        }
+    }
     .card{
     
     width: 15%;
@@ -194,5 +208,34 @@ export default {
     
     }
 }
-
+.img-gallery {
+    justify-content: space-between;
+    img{
+        width: 32%;
+    }
+}
+.img-main{
+    position: relative;
+    img{
+        width: 100%;
+    }
+    div.btn{
+        position: absolute;
+        width:40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        padding: 0;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .left{
+        left: 0;
+        bottom: 50%;
+    }
+    .right {
+        right: 0;
+        bottom: 50%;
+    }
+}
 </style>

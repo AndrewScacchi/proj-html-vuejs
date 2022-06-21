@@ -90,6 +90,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "../assets/css/style.scss";
   #header {
     width:100%;
     height: 100px;
@@ -102,7 +103,7 @@ export default {
     height: 100%;
   }
 nav{
-  background-color: white;
+  background-color: $white;
   a{
     height: 100px;
     text-decoration: none;
@@ -116,11 +117,10 @@ nav{
     img{
       height: 25px;
     }
-  
     // on hover nav link change color but we need to swap icons too
     &:hover{
-      background-color: #fe6601;
-      color: #fefffe;
+      background-color: $blazeOrange;
+      color: $sugarCane;
     }
 
   }

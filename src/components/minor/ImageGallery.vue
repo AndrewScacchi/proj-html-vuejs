@@ -8,6 +8,7 @@
         <img src="../../assets/images/gallery_03.jpg" alt="">
         <img src="../../assets/images/gallery_04.jpg" alt="">
     </div>
+    <!-- main image  -->
     <div class="imgMain">
         <div class="blueBar flex-row">
             <h2>See Our Kindergarten Photo Gallery</h2>
@@ -34,6 +35,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+@import "../../assets/css/style.scss";
 
 #imageGallery{
     width: 100%;

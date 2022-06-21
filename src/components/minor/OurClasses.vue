@@ -55,7 +55,7 @@ l<template>
         <div class="left">
             <h2>We have been educating children for over fifteen years. Our goal is to create a place that engages each child.</h2>
             <p> Molestias consequatur iure culpa voluptatem voluptatum id dignissimos ea maiores, magnam, cum quas excepturi aliquam inventore dolore in quis necessitatibus facilis ratione?</p>
-
+            <!-- yes the list is static. Is just a list! -->
             <ul>
                 <li>Comprehensive reporting on individual achievements</li>
                 <li>
@@ -76,12 +76,20 @@ l<template>
             </ul>
 
         </div>
+        <!-- This are static -->
         <div class="cardContainer flex-row">
             <div class="card flex-col">
                 <div class="round round-white">
-                    <img src="../../assets/images/school.png" alt="">
+                    <img src="../../assets/images/toy.png" alt="">
                 </div>
-                <h3>Frendly Place</h3>
+                <h3>Learning&Fun</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            <div class="card flex-col">
+                <div class="round round-white">
+                    <img src="../../assets/images/meal.png" alt="">
+                </div>
+                <h3>Healthy Meals</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
             <div class="card flex-col">
@@ -93,16 +101,9 @@ l<template>
             </div>
             <div class="card flex-col">
                 <div class="round round-white">
-                    <img src="../../assets/images/school.png" alt="">
+                    <img src="../../assets/images/shield.png" alt="">
                 </div>
-                <h3>Frendly Place</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-            <div class="card flex-col">
-                <div class="round round-white">
-                    <img src="../../assets/images/school.png" alt="">
-                </div>
-                <h3>Frendly Place</h3>
+                <h3>Children Safety</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
 
@@ -166,20 +167,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "../../assets/css/style.scss";
+
 #ourClasses{
-    width: 100%;
-    margin: 0 auto;
-    // padding: 25px 0;
-    align-items: center;
-    justify-content: space-around;
-    gap: 25px;
-    .title{
-        justify-content: center;
-        align-items: center;
-        img{
-            margin: 20px auto;
-        }
-    }
+    @include main-id-style;
+
+
+
     section{
         justify-content: center;
         align-items: center;
@@ -188,11 +182,11 @@ export default {
         gap: 5%;
         
         //debug
-        min-height: 200px;
-        background-color: white;
+        // min-height: 200px;
+        // background-color: white;
     }
     .main-a {
-        gap: 20px
+        gap: 20px;
     }
     .main-b{
         background-color: #f5f5f5;
@@ -203,28 +197,31 @@ export default {
         div.left {
             width: 50%;
             padding: 5px;
-            // height: 200px;
-            // border: 1px solid red;
+            
             > * {
                 margin: 25px 0;
             }
         }
 
     }
-    .section-title > *{
-        width: 50%;
+    .section-title{
+        gap: 1%;
+        justify-content: space-between;
+        & > *{
+        width: 49%;
+    }
     }
     .classContainer{
         width:100%;
         
-        gap: 2%;
+        gap: 1%;
         justify-content: space-between;
         flex-wrap: wrap;
     }
     .classCard {
         //debug
         position: relative;
-        width: 46%;
+        width: 49%;
         margin: 1% 0;
         height: 150px;
         color: white;
@@ -305,6 +302,13 @@ export default {
         height: 75px;
     }   
 }
-
+ul {
+  list-style-image: url('../../assets/images/style_1.png');
+  list-style-position: inside;
+  li{
+    line-height: 1.8em;
+    font-size: 1em;
+  }
+}
 
 </style>

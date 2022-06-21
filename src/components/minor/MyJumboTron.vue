@@ -3,23 +3,21 @@
   <div id="jumbo">
     <section class="mainJumbo">
       <div class="jumboText flex-col">
-        <h2>Frendly Atmosphere</h2>
-        <h1>
-          <strong>Welcoming Place</strong> 
-          for every child
-        </h1>
+        <h3>Friendly Atmosphere</h3>
+        <h1>Welcoming Place </h1>
+        <h2>For Every Child</h2>
 
-        <button class="btn btn-orange">
+        <div class="btn btn-orange">
           BUY THIS THEME NOW
-        </button>
+        </div>
       </div>
         
     </section>
     <section class="blueBar flex-row">
       <h2>How to Enroll your child to a class?</h2>
-      <button class="btn btn-blue">
+      <div class="btn btn-blue">
         LEARN MORE >
-      </button>
+      </div>
 
     </section>
     
@@ -35,6 +33,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
+@import "../../assets/css/style.scss";
+
     section.mainJumbo {
         width: 100%;
         margin: 0 auto;
@@ -42,7 +42,7 @@ export default {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 25px;
+        gap: 10px;
         background: url("../../assets/images/slider_slide2_img1.png") 60% 50% no-repeat,
                     url("../../assets/images/slider_slide2_img2.png") 80% 50% no-repeat,
                     url("../../assets/images/slider_slide2_background.png") bottom repeat,
@@ -55,12 +55,33 @@ export default {
         .jumboText{
           align-self: center;
           justify-content: center;
-          align-items: center;
+          // align-items: center;
+          text-align: left;
           width: 30%;
           margin-left: 15%;
           margin-right: auto;
           height: 300px;
-          gap:25px
+          gap:5px;
+
+          h1 {
+            font-weight: bolder;
+            font-size: 2.5em;
+          }
+          h2{
+            font-size: 2em;
+            font-weight: lighter;
+          }
+          h3{
+            color: #fe6601;
+            font-weight: lighter;
+            font-size: 1.5em;
+            // ahahah
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+          }
+          div.btn{
+            margin-top: 20px;
+            max-width: 200px;
+          }
           // border: 1px solid red;
 
         }
@@ -77,9 +98,11 @@ export default {
       padding: 0 15%;
       align-items: center;
       justify-content: space-between;
+      
       h2 {
         color: #fefffe;
         font-size: 2rem;
+        font-weight: lighter;
       }
       button{
         margin-right: 50px;

@@ -1,0 +1,86 @@
+// Variables
+
+$white: #ffffff;
+$sugarCane: #fefffe;
+$blazeOrange: #fe6601;
+$darkBlue: #56509f;
+
+// Mixins
+
+@mixin main-id-style {
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+    .title{
+        justify-content: center;
+        align-items: center;
+        img{
+            margin: 20px auto;
+        }
+    }
+}
+
+//  USEFUL CLASSES
+// flex rules
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+// buttons rules
+.btn {
+    border:none;
+    padding: 10px 15px;
+    font-size: 0.75rem;
+}
+  .btn-orange {
+    background-color: $blazeOrange;
+    color: $sugarCane;
+    border: 1px solid $blazeOrange;
+    &:hover {
+            color:$blazeOrange;
+            background-color: $sugarCane;
+            border: 1px solid $blazeOrange ;
+            cursor: pointer;
+          }
+  }
+  .btn-blue {
+    background-color: $darkBlue;
+    color: $sugarCane;
+    border: 1px solid $sugarCane;
+    &:hover {
+            color:$darkBlue;
+            background-color: $sugarCane;
+            cursor: pointer;
+            border: 1px solid $darkBlue;
+          }
+  }
+
+// others
+.round{
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-orange{
+        background-color: $blazeOrange;
+    }
+    &-blue{
+        background-color: $darkBlue;
+    }
+    &-white{
+        background-color: $white;
+    }
+        
+}
+h1, h2, h3, h4, h5 {
+    color: $darkBlue;
+}  

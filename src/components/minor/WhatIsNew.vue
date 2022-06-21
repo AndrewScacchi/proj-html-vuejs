@@ -12,71 +12,26 @@ l<template>
     <section class="flex-col main-a"> 
         <!-- cards container -->
         <div class="cardContainer flex-row">
-             <!-- card -->
-            <div class="card flex-col">
-                <span>October 3, 2014</span>
+           
+             <!-- dinamic card -->
+            <div v-for="(post, i) in blogPosts" :key="i" class="card flex-col">
+                <span>{{post.postDate}}</span>
                 <div class="cardImg">
-                    <img src="../../assets/images/blog_09.jpg" alt="">
-                    <div class="absoluteBtn">42</div>
+                    <img :src="post.postImg" :alt="post.postTitle">
+                    <div class="absoluteBtn">{{post.postReply}}</div>
                 </div>
                 <div class="cardText">
-                    <h3>Drawing and Painting Lessons</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit eius eum, impedit porro provident laudantium est dolorem. In beatae ad, laboriosam consequatur ab minus [..]</p>
+                    <h3>{{post.postTitle}}</h3>
+                    <p>{{post.postText}}</p>
                 </div>
                 <div class="cardFooter flex-row">
                     <div class="cardFooterItem flex-row">
                         <img src="../../assets/images/author.png" alt="">
-                        <span>Anna Brown</span>
+                        <span>{{post.postAuthor}}</span>
                     </div>
                     <div class="cardFooterItem flex-row">
                         <img src="../../assets/images/category.png" alt="">
-                        <span>Events, Fun</span>
-                    </div>
-
-                </div>
-            </div>
-            <!-- card -->
-            <div class="card flex-col">
-                <span>October 3, 2014</span>
-                <div class="cardImg">
-                    <img src="../../assets/images/blog_10.jpg" alt="">
-                    <div class="absoluteBtn">19</div>
-                </div>
-                <div class="cardText">
-                    <h3>Fall Parents Meeting Day</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit eius eum, impedit porro provident laudantium est dolorem. In beatae ad, laboriosam consequatur ab minus [..]</p>
-                </div>
-                <div class="cardFooter flex-row">
-                    <div class="cardFooterItem flex-row">
-                        <img src="../../assets/images/author.png" alt="">
-                        <span>Anna Brown</span>
-                    </div>
-                    <div class="cardFooterItem flex-row">
-                        <img src="../../assets/images/category.png" alt="">
-                        <span>Dance, Education</span>
-                    </div>
-
-                </div>
-            </div>
-             <!-- card -->
-            <div class="card flex-col">
-                <span>October 3, 2014</span>
-                <div class="cardImg">
-                    <img src="../../assets/images/blog_09.jpg" alt="">
-                    <div class="absoluteBtn">22</div>
-                </div>
-                <div class="cardText">
-                    <h3>Birthday in Kindergartner</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit eius eum, impedit porro provident laudantium est dolorem. In beatae ad, laboriosam [..]</p>
-                </div>
-                <div class="cardFooter flex-row">
-                    <div class="cardFooterItem flex-row">
-                        <img src="../../assets/images/author.png" alt="">
-                        <span>Name of Author</span>
-                    </div>
-                    <div class="cardFooterItem flex-row">
-                        <img src="../../assets/images/category.png" alt="">
-                        <span>Blabalb balblab</span>
+                        <span>{{post.postCategory}}</span>
                     </div>
 
                 </div>
@@ -99,6 +54,42 @@ l<template>
 <script>
 export default {
   name: 'WhatIsNew',
+  data(){
+    return{
+        blogPosts: [
+            {
+                postDate: "October 3, 2014",
+                postImg: require("../../assets/images/blog_09.jpg"),
+                postReply: "42",
+                postTitle: "Drawing and Painting Lessons",
+                postText: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit eius eum, impedit porro provident laudantium est dolorem. In beatae ad, laboriosam consequatur ab minus [..]",
+                postAuthor: "Anna Brown",
+                postCategory: "Dance, Education",
+
+            },
+            {
+                postDate: "October 3, 2014",
+                postImg: require("../../assets/images/blog_10.jpg"),
+                postReply: "19",
+                postTitle: "Fall Parents Meeting Day",
+                postText: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit eius eum, impedit porro provident laudantium est dolorem. In beatae ad, laboriosam consequatur ab minus [..]",
+                postAuthor: "Anna Brown",
+                postCategory: "Events, Fun",
+
+            },
+            {
+                postDate: "September 20, 2014",
+                postImg: require("../../assets/images/blog_08.jpg"),
+                postReply: "22",
+                postTitle: "Birthday in KinderGartner",
+                postText: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit eius eum, impedit porro provident laudantium est dolorem. In beatae ad, laboriosam consequatur ab minus [..]",
+                postAuthor: "Anna Brown",
+                postCategory: "Events, Fun",
+
+            },
+        ]
+    }
+  }
   
   
  
@@ -107,6 +98,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "../../assets/css/style.scss";
+
 #whatIsNew{
     width: 100%;
     margin: 0 auto;
