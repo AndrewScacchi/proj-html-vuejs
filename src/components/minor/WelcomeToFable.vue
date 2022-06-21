@@ -130,15 +130,12 @@ export default {
                 this.activeImg++;
                 if(this.activeImg > this.imgGallery.length - 1){
                     this.activeImg = 0;
-                
-                } 
-                
+                }    
             },
             prevImg(){
                 this.activeImg--;
                 if(this.activeImg < 0 ){
-                    this.activeImg = this.imgGallery.length - 1;
-                    
+                    this.activeImg = this.imgGallery.length - 1;         
                 }
             },
             onClick(activeImg){
@@ -185,10 +182,8 @@ setInterval(() => {
         }
     }
     .card{
-    
+    @include flex-centered;
     width: 15%;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     img{
       height: 60px;
@@ -209,20 +204,18 @@ setInterval(() => {
   
 }
 .round{
-        border-radius: 50%;
-        height: 150px;
-        width: 150px; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &-orange{
-            background-color: #fe6601;
-        }
-        &-blue{
-            background-color: #56509f;
-        }
-        
+    @include flex-centered;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px; 
+    display: flex;
+    &-orange{
+        background-color: $blazeOrange;
+    }
+    &-blue{
+        background-color: $darkBlue;
+    }
+    
     }
 
 .smallCard {
