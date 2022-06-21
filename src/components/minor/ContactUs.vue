@@ -88,7 +88,6 @@ export default {
   }
 }
 .contact-form{
-   
   margin-bottom: 100px;
   width: 100%;
   height: 100px;

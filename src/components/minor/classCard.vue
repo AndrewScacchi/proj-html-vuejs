@@ -47,13 +47,12 @@ export default {
 @import "../../assets/css/style.scss";
 
 .classCard {
-        //debug
+        
         position: relative;
         width: 49%;
         margin: 1% 0;
         height: 150px;
         color: $white;
-        
         background-color: $darkBlue;
         h3 {
             color: $white;
@@ -64,8 +63,6 @@ export default {
             justify-content: space-between;
         }
         .classStats{
-
-
             div {
             gap: 5px;
             width: 50%;
@@ -84,24 +81,5 @@ export default {
             font-size: 0.8em;
         }
     }
-    .absoluteBtn {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: 10;
-        color: $white;
-        background-color: $blazeOrange;
-        border:1px solid $blazeOrange;
-        padding: 10px 15px;
-        font-size: 0.8rem;
-        font-weight: bold;
-
-        &:hover {
-            cursor: pointer;
-            color: $blazeOrange;
-            background-color: $white;
-        }
     
-    }
-
 </style>

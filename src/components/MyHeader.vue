@@ -99,7 +99,7 @@ export default {
 
     width:100%;
     height: 100px;
-    background: white;
+    background: $white;
     padding: 0 15%;
     justify-content: space-between;
     align-items: center;
@@ -112,7 +112,7 @@ nav{
   a{
     height: 100px;
     text-decoration: none;
-    color: #444275;
+    color: $darkBlue;
 
     gap: 5px;
     

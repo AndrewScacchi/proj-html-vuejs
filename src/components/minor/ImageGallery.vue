@@ -17,18 +17,6 @@
             </div>
         </div>
         
-        <!-- static quote -->
-        <!-- <div  class="quote flex-col display-none">
-            <div class="quote-wrapper flex-col">
-                <img src="../../assets/images/quote_alt.png" alt="">
-            </div>
-
-            <p>I have to say that i have 2 children ages 5 and 2 and have used various daycare's in Kindergartens and this is by far the best i have ever used</p>
-            <span class="line"></span>
-            <span>Cecil J. Kirk</span>
-        </div> -->
-
-        <!-- :src="imgGallery[activeImg].img" -->
         <!-- dinamic quote -->
         <div id="quote" class="quote flex-col " @click="nextQuote">
             <div class="quote-wrapper flex-col">
@@ -42,7 +30,7 @@
 
         </div>
         <div class="bottom flex-row">
-                <div v-for="(item, i) in quoteList" :key="i" class="rectangle"></div>
+                <div v-for="(item, i) in quoteList" :key="i" class="rectangle" ></div>
 
         </div>
 
@@ -192,8 +180,8 @@ setInterval(() => {
 
     }
     .quote-wrapper{
-        justify-content: center;
-        align-items: center;
+        @include flex-centered;
+        
         padding: 20px;
         border-radius: 50%;
         border: 2px solid $white;
@@ -208,7 +196,8 @@ setInterval(() => {
     position: absolute;
     bottom: 50px;
     width: 100%;
-    justify-content: center;
+    @include flex-centered;
+        
     gap: 10px;
 }
 .rectangle {
@@ -217,7 +206,7 @@ setInterval(() => {
     border: 2px solid $white;
 }
 .rectangle-up {
-    bottom: 80px;
+    margin-bottom: 30px;
 }
 
 </style>

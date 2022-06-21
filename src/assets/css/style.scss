@@ -23,7 +23,10 @@ $darkBlue: #56509f;
         }
     }
 }
-
+@mixin flex-centered {
+    justify-content: center;
+    align-items: center;
+}
 //  USEFUL CLASSES
 // flex rules
 .flex-row{
@@ -75,6 +78,26 @@ $darkBlue: #56509f;
             border: 1px solid $blazeOrange;
           }
   }
+.absoluteBtn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    color: $white;
+    background-color: $blazeOrange;
+    border:1px solid $blazeOrange;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+
+    &:hover {
+        cursor: pointer;
+        color: $blazeOrange;
+        background-color: $white;
+    }
+
+}
+
 
 // others
 .round{

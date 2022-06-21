@@ -101,29 +101,15 @@ export default {
 @import "../../assets/css/style.scss";
 
 #whatIsNew{
-    width: 100%;
-    margin: 0 auto;
-    padding: 25px 0;
-    align-items: center;
-    justify-content: space-around;
-    gap: 25px;
-    .title{
-        justify-content: center;
-        align-items: center;
-        img{
-            margin: 20px auto;
-        }
-    }
+    @include main-id-style;
+    
+    
     section{
         justify-content: center;
         align-items: center;
         width: 100%;
         padding: 25px 15%;
         gap: 5%;
-        
-        //debug
-        min-height: 200px;
-        background-color: white;
     }
 }
 .main-a {
@@ -136,7 +122,6 @@ export default {
 
 }
 .cardContainer{
-    // width: 50%;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -174,23 +159,4 @@ export default {
     }
 }
 
-.absoluteBtn {
-        position: absolute;
-        right: 0;
-        bottom: 4px;
-        z-index: 10;
-        color: white;
-        background-color: #fe6601;
-        border:1px solid #fe6601;
-        padding: 10px 15px;
-        font-size: 1rem;
-        font-weight: bold;
-
-        &:hover {
-            cursor: pointer;
-            color: #fe6601;
-            background-color: white;
-        }
-    
-    }
 </style>
