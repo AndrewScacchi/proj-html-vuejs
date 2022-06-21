@@ -62,6 +62,17 @@ $darkBlue: #56509f;
             border: 1px solid $darkBlue;
           }
   }
+  .btn-white {
+    background-color: $sugarCane;
+    color: $blazeOrange;
+    border: 1px solid $blazeOrange;
+    &:hover {
+            color:$sugarCane;
+            background-color: $blazeOrange;
+            cursor: pointer;
+            border: 1px solid $blazeOrange;
+          }
+  }
 
 // others
 .round{

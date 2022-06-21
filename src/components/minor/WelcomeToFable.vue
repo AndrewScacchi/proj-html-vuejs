@@ -47,7 +47,7 @@
             <div class="section-left flex-col">
                 <div class="left-icon flex-row">
                     <div class="btn btn-orange">Overwiew</div>
-                    <div class="btn btn-orange" >Our Mission</div>
+                    <div class="btn btn-white" >Our Mission</div>
                 </div>
                 <h2 class="left-title">Our philosphy is learning through play as we offer a stimulating enviroment for children. </h2>
                 <!-- small cards -->
@@ -57,7 +57,7 @@
                             <img src="../../assets/images/clock_alt.png" alt="">
                         </div>
                         <div class="smallCard-text">                       
-                            <h3>placeholder</h3>
+                            <h3>Full Day Sessions</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque tempore dicta blanditiis pariatur, amet.</p>
                         </div>
 
@@ -65,10 +65,10 @@
                     
                     <div class="smallCard flex-row">
                         <div class="smallCard-img">
-                            <img src="../../assets/images/clock_alt.png" alt="">
+                            <img src="../../assets/images/diagram_alt.png" alt="">
                         </div>
                         <div class="smallCard-text">                       
-                            <h3>placeholder</h3>
+                            <h3>Varied Classes</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque tempore dicta blanditiis pariatur, amet.</p>
                         </div>
                     </div>
@@ -82,8 +82,8 @@
                 <div class="img-main">
                     <img :src="imgGallery[activeImg].img" alt="">
                     <!-- <img src="../../assets/images/gallery_08-690x506.jpg" alt=""> -->
-                    <div class="btn btn-orange left" @click="prevImg">&lt;</div>
-                    <div class="btn btn-orange right" @click="nextImg">></div>
+                    <div class="btn btn-orange left" @click="prevImg" id="prev">&lt;</div>
+                    <div class="btn btn-orange right" @click="nextImg" id="next">></div>
                 </div>
                 <!-- gallery at the bottom -->
                 <div class="img-gallery flex-row">
@@ -136,7 +136,7 @@ export default {
                 this.activeImg++;
                 if(this.activeImg > this.imgGallery.length - 1){
                     this.activeImg = 0;
-                    // this.isActive = true;
+                
                 } 
                 
             },
@@ -144,12 +144,18 @@ export default {
                 this.activeImg--;
                 if(this.activeImg < 0 ){
                     this.activeImg = this.imgGallery.length - 1;
-                    // this.isActive = true;
+                    
                 }
             },
             
     }
+   
 }
+
+//basic timing function
+setInterval(() => {
+    document.getElementById("next").click();
+}, 3000);
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -229,10 +235,9 @@ export default {
     align-items: center;
     gap: 10px;
     .smallCard-img{
-        background: #fe6601;
-        width: 75px;
-        height: 75px;
+        background: $blazeOrange;
         border-radius: 50%;
+        padding: 15px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -269,7 +274,9 @@ export default {
         bottom: 50%;
     }
 }
-
+.btn-white {
+    margin-left: 10px;
+}
 // this class should be given on the active element..
 .bottomBorder {
     border-bottom: 2px solid $blazeOrange;

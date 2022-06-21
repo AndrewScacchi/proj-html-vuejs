@@ -92,6 +92,11 @@ export default {
 <style scoped lang="scss">
 @import "../assets/css/style.scss";
   #header {
+    position:sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
     width:100%;
     height: 100px;
     background: white;

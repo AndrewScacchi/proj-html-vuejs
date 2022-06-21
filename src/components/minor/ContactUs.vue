@@ -25,15 +25,15 @@
 
 
     </div>
-    <form action="get" class="contact-form flex-row">
+    <form id="myForm" action="get" class="contact-form flex-row">
       <div class="form-data flex-col">
-        <input type="text" placeholder="Your Name *" required>
-        <input type="mail" placeholder="Your E-mail *" required>
-        <input type="text" placeholder="Subject">
+        <input type="text" placeholder="Your Name *" name="userName" required>
+        <input type="mail" placeholder="Your E-mail *" name="userMail" required>
+        <input type="text" placeholder="Subject" >
       </div>
-      <textarea class="form-msg" placeholder="Your Message *" required></textarea>
+      <textarea class="form-msg" placeholder="Your Message *" required name="userMsg"></textarea>
 
-      <input id="form-btn" type="button" value="SEND MESSAGE" class="btn btn-orange">
+      <input @click="send" id="form-btn" type="button" value="SEND MESSAGE" class="btn btn-orange">
     </form> 
     
     
@@ -43,6 +43,18 @@
 <script>
 export default {
   name: 'WelcomeToFable',
+  methods: {
+    send(){
+      let a = document.forms["myForm"]["userName"].value;
+      let b = document.forms["myForm"]["userMail"].value;
+      let c = document.forms["myForm"]["userMsg"].value;
+      if (a == "" || b == "" || c == "") {
+        alert("One or more required field are missing");
+        return false;
+      }
+      document.getElementById("myForm").reset();
+    }
+  }
 }
 </script>
 

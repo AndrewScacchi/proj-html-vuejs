@@ -17,7 +17,8 @@
             </div>
         </div>
         
-        <div class="quote flex-col">
+        <!-- static quote -->
+        <!-- <div  class="quote flex-col display-none">
             <div class="quote-wrapper flex-col">
                 <img src="../../assets/images/quote_alt.png" alt="">
             </div>
@@ -25,7 +26,19 @@
             <p>I have to say that i have 2 children ages 5 and 2 and have used various daycare's in Kindergartens and this is by far the best i have ever used</p>
             <span class="line"></span>
             <span>Cecil J. Kirk</span>
+        </div> -->
+
+        <!-- :src="imgGallery[activeImg].img" -->
+        <!-- dinamic quote -->
+        <div id="quote" class="quote flex-col " @click="nextQuote">
+            <div class="quote-wrapper flex-col">
+                <img src="../../assets/images/quote_alt.png" alt="">
+            </div>
+            <p>{{quoteList[activeQuote].quoteText}}</p>
+            <span class="line"></span>
+            <span>{{quoteList[activeQuote].quoteAuthor}}</span>
         </div>
+
 
     </div>
     <!-- bluebar -->
@@ -40,29 +53,60 @@ export default {
 
   data(){
     return{
+        activeQuote: 0,
         quoteList: [
             {
-                quoteText: "placeholder1",
-                quoteAuthor: "Author1",
-                visible: false,
+                quoteText: "I have to say that i have 2 children ages 5 and 2 and have used various daycare's in Kindergartens and this is by far the best i have ever used",
+                quoteAuthor: "Cecil J. Kirk",
+                // visible: false,
             },
             {
-                quoteText: "placeholder2",
-                quoteAuthor: "Author2",
-                visible: false,
+                quoteText: "If you are not yelling at your kids, you are not spending enought time with them",
+                quoteAuthor: "Reese Whiterspoon",
+                // visible: false,
             },
             
             {
-                quoteText: "placeholder3",
-                quoteAuthor: "Author3",
-                visible: false,
+                quoteText: "Do or do not. There is no try",
+                quoteAuthor: "Jedi Master Yoda",
+                // visible: false,
+            },
+            {
+                quoteText: "This conversation has taken a turn for the moronic..",
+                quoteAuthor: "Dorian Pavus",
+                // visible: false,
             },
             
             
         ],
+        // i wanna try change the background url..not sure how
+        parallaxImgs : [
+            {
+                img: require("../../assets/images/parallax_02.jpg"),
+            },
+            {
+                img: require("../../assets/images/parallax_01.jpg"),
+            },
+        ]
     }
+   
+  },
+  methods: {
+    nextQuote(){
+                this.activeQuote++;
+                if(this.activeQuote > this.quoteList.length - 1){
+                    this.activeQuote = 0;
+                    
+                } 
+                
+            },
   }
+   
 }
+//basic timing function
+setInterval(() => {
+    document.getElementById("quote").click();
+}, 5000);
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -139,6 +183,8 @@ export default {
         margin-bottom: 25px;
     }
 }
-
+.display-none {
+    display: none;
+}
 
 </style>

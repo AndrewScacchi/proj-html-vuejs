@@ -28,7 +28,11 @@ export default {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+#app {
+  position:relative;
+  scroll-margin-top: 100px;
+}
+ 
 
 
 
