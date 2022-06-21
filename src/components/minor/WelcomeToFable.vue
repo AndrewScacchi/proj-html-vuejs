@@ -116,15 +116,15 @@ export default {
             activeImg: 0,
             imgGallery: [
                 {
-                   img: require("../../assets/images/gallery_01.jpg"),
+                   img: require("../../assets/images/gallery_07-690x506.jpg"),
                    isActive: false, 
                 },
                 {
-                   img: require("../../assets/images/gallery_02.jpg"),
+                   img: require("../../assets/images/gallery_01-690x506.jpg"),
                    isActive: false, 
                 },
                 {
-                   img: require("../../assets/images/gallery_03.jpg"),
+                   img: require("../../assets/images/gallery_08-690x506.jpg"),
                    isActive: false, 
                 },
 
@@ -164,7 +164,6 @@ setInterval(() => {
 
 #welcomeToFable{
     @include main-id-style;
-    padding: 25px 0;
   section{
     justify-content: center;
     align-items: center;

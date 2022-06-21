@@ -37,6 +37,13 @@
             <p>{{quoteList[activeQuote].quoteText}}</p>
             <span class="line"></span>
             <span>{{quoteList[activeQuote].quoteAuthor}}</span>
+
+            
+
+        </div>
+        <div class="bottom flex-row">
+                <div v-for="(item, i) in quoteList" :key="i" class="rectangle"></div>
+
         </div>
 
 
@@ -74,6 +81,16 @@ export default {
             {
                 quoteText: "This conversation has taken a turn for the moronic..",
                 quoteAuthor: "Dorian Pavus",
+                // visible: false,
+            },
+            {
+                quoteText: "Se hai paura di ingrassare, fai a meno di mangiare, non pensare a me mangerò per tre.. finche l'appetito c'è!",
+                quoteAuthor: "Asterix",
+                // visible: false,
+            },
+            {
+                quoteText: "If everything seems to be going well, you have obviously overlooked something.",
+                quoteAuthor: "from Murphy's Laws",
                 // visible: false,
             },
             
@@ -185,6 +202,22 @@ setInterval(() => {
 }
 .display-none {
     display: none;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+.rectangle {
+    width: 40px;
+    height: 12px;
+    border: 2px solid $white;
+}
+.rectangle-up {
+    bottom: 80px;
 }
 
 </style>

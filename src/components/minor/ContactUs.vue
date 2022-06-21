@@ -3,7 +3,7 @@
   <div id="contactUs" class="flex-col">
 
 
-    <div class="contact-title flex-col">
+    <div class="title flex-col">
       <h1>Contact Us</h1>
       <h5>Our contact adress and contact details</h5>
       <img src="../../assets/images/header_divider.png" alt="">
@@ -62,27 +62,15 @@ export default {
 <style scoped lang="scss">
 @import "../../assets/css/style.scss";
 #contactUs{
-  width: 70%;
-  margin: 0 auto;
-  min-height: 200px;
-  padding: 25px 0 75px;
-  align-items: center;
-  justify-content: space-around;
-  gap: 25px;
-  .contact-title{
-    justify-content: center;
-    align-items: center;
-    img{
-        margin: 20px auto;
-    }
+  @include main-id-style;
+  padding: 25px 15%;
   }
-  .contact-links{
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 5%;
-    .contact-card{
-    
+.contact-links{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5%;
+  .contact-card{
     width: 15%;
     justify-content: center;
     align-items: center;
@@ -98,35 +86,35 @@ export default {
       font-size: 0.8rem;
     }
   }
-  }
-  .contact-form{
-    width: 100%;
-    height: 100px;
-    gap: 2%;
-    flex-wrap: wrap;
-    div {
-      width: 49%;
-      justify-content: space-between;
-      gap: 10px;
-      input {
-        width: 100%;
-        line-height: 25px;
-        padding: 0 5px;
-      }
-    } 
-    .form-msg{
-      width: 49%;
-      padding: 5px;
-      resize: none;
-    }
-    #form-btn {
-      padding: 5px;
-      margin: 25px auto;
-    }
-    
-
-  }
-  
 }
+.contact-form{
+   
+  margin-bottom: 100px;
+  width: 100%;
+  height: 100px;
+  gap: 2%;
+  flex-wrap: wrap;
+  div {
+    width: 49%;
+    justify-content: space-between;
+    gap: 10px;
+    input {
+      width: 100%;
+      line-height: 25px;
+      padding: 0 5px;
+    }
+  } 
+  .form-msg{
+    width: 49%;
+    padding: 5px;
+    resize: none;
+  }
+  #form-btn {
+    padding: 5px;
+    margin: 25px auto;
+  }
+}
+  
+
 
 </style>

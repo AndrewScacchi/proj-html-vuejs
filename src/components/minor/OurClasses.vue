@@ -23,8 +23,8 @@ l<template>
         <!-- cards container -->
         <div class="classContainer flex-row">
             <!-- Dynamic card -->
-            <div v-for="(classe, i) in classesList" :key="i" class="classCard flex-row">
-                <!-- card text -->
+            <!-- <div v-for="(classe, i) in classesList" :key="i" class="classCard flex-row">
+                
                 <div class="classCard-text flex-col">
                     <div class="className">
                         <h3>{{classe.className}}</h3>
@@ -41,14 +41,23 @@ l<template>
                         </div>
                     </div>                    
                 </div>
-                <!-- card img -->
+                
                 <img class="classCard-img" :src="classe.img" :alt="classe.className">
-                <!-- card btn -->
+               
                 <div class="absoluteBtn">
                     READ MORE >
                 </div>
 
-            </div>    
+            </div>  -->
+            
+            <!-- props -->
+            <classCard v-for="(singleClass, i) in classesList" :key="i" 
+                :nombre="singleClass.className"
+                :imagen="singleClass.img"
+                :edad="singleClass.ageRange"
+                :edadTipo="singleClass.ageRangeName"
+                :numero="singleClass.classSize"
+            />
         </div>
     </section>
     <section class="main-b flex-row">
@@ -119,49 +128,44 @@ l<template>
 </template>
 
 <script>
+import classCard from './classCard.vue'
 export default {
-  name: 'OurClasses',
-  data(){
-    return{
-        classesList : [
-            {
-                className : "Little Lambs",
-                img : require("../../assets/images/class_01-690x506.jpg"),
-                ageRange: "12-24",
-                ageRangeName: "Months olds",
-                classSize: "9",
-            },
-            {
-                className : "Bouncy Bears",
-                img : require("../../assets/images/class_02-690x506.jpg"),
-                ageRange: "2-3",
-                ageRangeName: "Years olds",
-                classSize: "12",
-            },
-            
-            {
-                className : "Tenderhearts",
-                img : require("../../assets/images/class_03-690x506.jpg"),
-                ageRange: "3-4",
-                ageRangeName: "Years Old",
-                classSize: "15",
-            },
-            
-            {
-                className : "Shining Stars",
-                img : require("../../assets/images/class_04-690x506.jpg"),
-                ageRange: "4-5",
-                ageRangeName: "Years Old",
-                classSize: "20",
-            },
-            
-            
-
-
-        ]
-    }
-  }
- 
+    name: "OurClasses",
+    data() {
+        return {
+            classesList: [
+                {
+                    className: "Little Lambs",
+                    img: require("../../assets/images/class_01-690x506.jpg"),
+                    ageRange: "12-24",
+                    ageRangeName: "Months olds",
+                    classSize: "9",
+                },
+                {
+                    className: "Bouncy Bears",
+                    img: require("../../assets/images/class_02-690x506.jpg"),
+                    ageRange: "2-3",
+                    ageRangeName: "Years olds",
+                    classSize: "12",
+                },
+                {
+                    className: "Tenderhearts",
+                    img: require("../../assets/images/class_03-690x506.jpg"),
+                    ageRange: "3-4",
+                    ageRangeName: "Years Old",
+                    classSize: "15",
+                },
+                {
+                    className: "Shining Stars",
+                    img: require("../../assets/images/class_04-690x506.jpg"),
+                    ageRange: "4-5",
+                    ageRangeName: "Years Old",
+                    classSize: "20",
+                },
+            ]
+        };
+    },
+    components: { classCard }
 }
 </script>
 
@@ -181,19 +185,14 @@ export default {
         padding: 25px 15%;
         gap: 5%;
         
-        //debug
-        // min-height: 200px;
-        // background-color: white;
     }
     .main-a {
         gap: 20px;
     }
     .main-b{
-        background-color: #f5f5f5;
+        background-color: $darkwhite;
         padding: 50px 15%;
         gap: 0;
-        
-
         div.left {
             width: 50%;
             padding: 5px;
@@ -218,41 +217,7 @@ export default {
         justify-content: space-between;
         flex-wrap: wrap;
     }
-    .classCard {
-        //debug
-        position: relative;
-        width: 49%;
-        margin: 1% 0;
-        height: 150px;
-        color: white;
-        
-        background-color: #56509f;
-        .classCard-text {
-            width:50%;
-            padding: 15px;
-            justify-content: space-between;
-        }
-        .classStats{
-
-
-            div {
-            gap: 5px;
-            width: 50%;
-            justify-content: center;
-            align-items: center;
-            }
-            .classStats-1 {
-                border-right: 1px solid white;
-            }
-        } 
-        
-        img {
-            width:50%;
-        }
-        .minor {
-            font-size: 0.8em;
-        }
-    }
+    
     .cardContainer{
         width: 50%;
         justify-content: center;
@@ -278,25 +243,7 @@ export default {
         font-size: 0.8rem;
         }
     }
-    .absoluteBtn {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: 10;
-        color: white;
-        background-color: #fe6601;
-        border:1px solid #fe6601;
-        padding: 10px 15px;
-        font-size: 0.8rem;
-        font-weight: bold;
-
-        &:hover {
-            cursor: pointer;
-            color: #fe6601;
-            background-color: white;
-        }
-    
-    }
+   
     .round {
         width: 75px;
         height: 75px;
