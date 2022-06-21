@@ -13,7 +13,7 @@
        
         <div class="card">
             <div class="round round-orange">
-                <img src="../../assets/images/globe_alt.png" alt="">
+                <img src="../../assets/images/schoolbag_alt.png" alt="">
             </div>
             <h3>Morbi Etos</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  at laudantium asperiores nisi</p>
@@ -27,14 +27,14 @@
         </div>
         <div class="card">
             <div class="round round-orange">
-                <img src="../../assets/images/bell_alt.png" alt="">
+                <img src="../../assets/images/globe_alt.png" alt="">
             </div>
             <h3>Maecenas Node</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga rerum corrupti,laudantium asperiores nisi</p>
         </div>
         <div class="card">
             <div class="round round-blue">
-                <img src="../../assets/images/globe_alt.png" alt="">
+                <img src="../../assets/images/bell_alt.png" alt="">
             </div>
             <h3>Praesent Morbi</h3>
             <p>Ipsum fuga rerum corrupti, odit aspernatur illum harum fugiat illo at laudantium asperiores nisi</p>
@@ -100,7 +100,7 @@ export default {
 #WelcomeToFable{
   width: 100%;
   margin: 0 auto;
-  padding: 25px 0 75px;
+  padding: 25px 0;
   align-items: center;
   justify-content: space-around;
   gap: 25px;
@@ -153,7 +153,7 @@ export default {
     p {
       font-size: 0.8rem;
     }
-  }
+    }
   }
   .main-b{
     padding: 25px;

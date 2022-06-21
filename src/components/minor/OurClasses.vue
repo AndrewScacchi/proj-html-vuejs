@@ -1,6 +1,6 @@
 l<template>
 <!-- creating a Jumbotron with img and file in flex -->
-  <div id="WelcomeToFable" class="flex-col">
+  <div id="OurClasses" class="flex-col">
 
 
     <div class="title flex-col">
@@ -23,7 +23,7 @@ l<template>
         <!-- cards container -->
         <div class="classContainer flex-row">
             <!-- Dynamic card -->
-           <div v-for="(classe, i) in classesList" :key="i" class="classCard flex-row">
+            <div v-for="(classe, i) in classesList" :key="i" class="classCard flex-row">
                 <!-- card text -->
                 <div class="classCard-text flex-col">
                     <div class="className">
@@ -48,15 +48,65 @@ l<template>
                     READ MORE >
                 </div>
 
-            </div>
-          
-            
+            </div>    
         </div>
-         
-
-      
     </section>
-    <section class="main-b">
+    <section class="main-b flex-row">
+        <div class="left">
+            <h2>We have been educating children for over fifteen years. Our goal is to create a place that engages each child.</h2>
+            <p> Molestias consequatur iure culpa voluptatem voluptatum id dignissimos ea maiores, magnam, cum quas excepturi aliquam inventore dolore in quis necessitatibus facilis ratione?</p>
+
+            <ul>
+                <li>Comprehensive reporting on individual achievements</li>
+                <li>
+                    Educational field trips and school presentations
+                </li>
+                <li>
+                    Individual attention in a small-class setting
+                </li>
+                <li>
+                    Learning program with after-school care
+                </li>
+                <li>
+                    Opportunities to carry out scientific investigations
+                </li>
+                <li>
+                    Positive learning eniviroment for your child
+                </li>
+            </ul>
+
+        </div>
+        <div class="cardContainer flex-row">
+            <div class="card flex-col">
+                <div class="round round-white">
+                    <img src="../../assets/images/school.png" alt="">
+                </div>
+                <h3>Frendly Place</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            <div class="card flex-col">
+                <div class="round round-white">
+                    <img src="../../assets/images/school.png" alt="">
+                </div>
+                <h3>Frendly Place</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            <div class="card flex-col">
+                <div class="round round-white">
+                    <img src="../../assets/images/school.png" alt="">
+                </div>
+                <h3>Frendly Place</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            <div class="card flex-col">
+                <div class="round round-white">
+                    <img src="../../assets/images/school.png" alt="">
+                </div>
+                <h3>Frendly Place</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+
+        </div>
         
 
     </section>
@@ -69,7 +119,7 @@ l<template>
 
 <script>
 export default {
-  name: 'WelcomeToFable',
+  name: 'OurClasses',
   data(){
     return{
         classesList : [
@@ -116,10 +166,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#WelcomeToFable{
+#OurClasses{
     width: 100%;
     margin: 0 auto;
-    padding: 25px 0 75px;
+    // padding: 25px 0;
     align-items: center;
     justify-content: space-around;
     gap: 25px;
@@ -145,8 +195,21 @@ export default {
         gap: 20px
     }
     .main-b{
-        padding: 25px;
         background-color: #f5f5f5;
+        padding: 50px 15%;
+        gap: 0;
+        
+
+        div.left {
+            width: 50%;
+            padding: 5px;
+            // height: 200px;
+            // border: 1px solid red;
+            > * {
+                margin: 25px 0;
+            }
+        }
+
     }
     .section-title > *{
         width: 50%;
@@ -193,6 +256,31 @@ export default {
             font-size: 0.8em;
         }
     }
+    .cardContainer{
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px
+    }
+    .card{
+        width: 40%;
+        min-height: 150px;
+        
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        img{
+        height: 35px;
+        }
+        h3 {
+        margin: 10px 0;
+        font-weight: bold;
+        }
+        p {
+        font-size: 0.8rem;
+        }
+    }
     .absoluteBtn {
         position: absolute;
         right: 0;
@@ -212,6 +300,11 @@ export default {
         }
     
     }
+    .round {
+        width: 75px;
+        height: 75px;
+    }   
 }
+
 
 </style>

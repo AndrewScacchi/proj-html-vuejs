@@ -24,6 +24,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .flex-row{
   display: flex;
@@ -62,6 +63,26 @@ export default {
           border: 1px solid #56509f;
         }
 }
+.round{
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-orange{
+            background-color: #fe6601;
+        }
+        &-blue{
+            background-color: #56509f;
+        }
+        &-white{
+          background-color: white;
+        }
+        
+    }
+h1, h2, h3, h4, h5 {
+  color: #56509f;
+}  
 
 
 //classes

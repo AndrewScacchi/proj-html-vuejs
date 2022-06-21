@@ -3,6 +3,8 @@
     <MyJumboTron/>
     <WelcomeToFable/>
     <OurClasses/>
+    <ImageGallery/>
+    <WhatIsNew/>
     <GoogleMap/>
     <ContactUs/>
   </main>
@@ -12,6 +14,8 @@
 import MyJumboTron from './minor/MyJumboTron.vue';
 import WelcomeToFable from './minor/WelcomeToFable.vue';
 import OurClasses from './minor/OurClasses.vue';
+import ImageGallery from './minor/ImageGallery.vue';
+import WhatIsNew from './minor/WhatIsNew.vue';
 import GoogleMap from './minor/GoogleMap.vue';
 import ContactUs from './minor/ContactUs.vue';
 
@@ -22,6 +26,8 @@ export default {
     MyJumboTron,
     WelcomeToFable,
     OurClasses,
+    ImageGallery,
+    WhatIsNew,
     GoogleMap,
     ContactUs,
 }

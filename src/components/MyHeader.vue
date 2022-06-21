@@ -8,9 +8,14 @@
       </a> -->
 
       <!-- dynamic navLink.. to add dinamic links to page sections -->
-      <a v-for="(navLink, i) in navLinks" :key="i" href="#" class="flex-col">
-        <img :src="navLink.img" :alt="navLink.text">
+      <a v-for="(navLink, i) in navLinks" :key="i" href="#" class="flex-col"
+        @mouseover="navLink.hover = true"
+        @mouseleave="navLink.hover = false"
+        >
+        <img v-if="navLink.hover" :src="navLink.imgHover" :alt="navLink.text">
+        <img v-else :src="navLink.img" :alt="navLink.text">
         <span>{{navLink.text}}</span>
+         
       </a>
 
     </nav>
@@ -29,36 +34,43 @@ export default {
           text: "Home",
           img: require("../assets/img/home.png"),
           imgHover: require("../assets/img/home-2.png"),
+          hover: false,
         },
         {
           text: "Pages",
           img: require("../assets/img/document.png"),
-          imgHover: require("../assets/img/document-2.png")
+          imgHover: require("../assets/img/document-2.png"),
+          hover: false,
         },
         {
           text: "Blog",
           img: require("../assets/img/printer.png"),
-          imgHover: require("../assets/img/printer-2.png")
+          imgHover: require("../assets/img/printer-2.png"),
+          hover: false,
         },
         {
           text: "Shop",
           img: require("../assets/img/cart.png"),
-          imgHover: require("../assets/img/cart-2.png")
+          imgHover: require("../assets/img/cart-2.png"),
+          hover: false,
         },
         {
           text: "Shortcodes",
           img: require("../assets/img/lab.png"),
-          imgHover: require("../assets/img/lab-2.png")
+          imgHover: require("../assets/img/lab-2.png"),
+          hover: false,
         },
         {
           text: "Support",
           img: require("../assets/img/chat.png"),
-          imgHover: require("../assets/img/chat-2.png")
+          imgHover: require("../assets/img/chat-2.png"),
+          hover: false,
         },
         {
           text: "Contact",
           img: require("../assets/img/envelope.png"),
-          imgHover: require("../assets/img/envelope-2.png")
+          imgHover: require("../assets/img/envelope-2.png"),
+          hover: false,
         }
 
 
