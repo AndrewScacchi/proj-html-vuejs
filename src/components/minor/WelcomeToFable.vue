@@ -87,7 +87,7 @@
                 </div>
                 <!-- gallery at the bottom -->
                 <div class="img-gallery flex-row">
-                    <img class="bottomBorder" v-for="(img, i) in imgGallery" :key="i" :src="img.img" alt="" :class="i === activeImg ? 'bottomBorderActive' : '' " >
+                    <img class="bottomBorder" v-for="(img, i) in imgGallery" :key="i" :src="img.img" alt="" :class="i === activeImg ? 'bottomBorderActive' : '' " @click="onClick(i)">
                 </div>
                 
             </div>
@@ -140,6 +140,9 @@ export default {
                     this.activeImg = this.imgGallery.length - 1;
                     
                 }
+            },
+            onClick(activeImg){
+                this.activeImg = activeImg;
             },
             
     }
@@ -241,6 +244,9 @@ setInterval(() => {
     justify-content: space-between;
     img{
         width: 32%;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 .img-main{
