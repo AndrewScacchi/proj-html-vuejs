@@ -109,7 +109,11 @@ export default {
 //basic timing function
 setInterval(() => {
     document.getElementById("quote").click();
+    document.querySelector(".imgMain").classList.add("imgMain-Alt");
 }, 5000);
+setInterval(() => {
+    document.querySelector(".imgMain").classList.remove("imgMain-Alt");
+}, 10000);
 
 
 </script>
@@ -187,6 +191,11 @@ setInterval(() => {
         border: 2px solid $white;
         margin-bottom: 25px;
     }
+}
+.imgMain-Alt{
+    background: url("../../assets/images/parallax_01.jpg");
+    background-position: 0 -75px;
+    background-size: cover;
 }
 .display-none {
     display: none;
