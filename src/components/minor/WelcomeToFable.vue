@@ -1,6 +1,6 @@
 <template>
 <!-- creating a Jumbotron with img and file in flex -->
-  <div id="WelcomeToFable" class="flex-col">
+  <div id="welcomeToFable" class="flex-col">
 
 
     <div class="title flex-col">
@@ -97,7 +97,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#WelcomeToFable{
+#welcomeToFable{
   width: 100%;
   margin: 0 auto;
   padding: 25px 0;

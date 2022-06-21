@@ -1,6 +1,6 @@
 l<template>
 <!-- creating a Jumbotron with img and file in flex -->
-  <div id="OurClasses" class="flex-col">
+  <div id="whatIsNew" class="flex-col">
 
 
     <div class="title flex-col">
@@ -107,7 +107,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#OurClasses{
+#whatIsNew{
     width: 100%;
     margin: 0 auto;
     padding: 25px 0;
@@ -153,7 +153,6 @@ export default {
 .card {
     width: 30%;
     height: 400px;
-    border: 1px solid red;
     gap: 10px;
     img {
         width: 100%;

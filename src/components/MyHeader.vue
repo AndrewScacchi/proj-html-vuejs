@@ -2,22 +2,19 @@
   <div id="header" class="flex-row">
     <img id="logo" src="../assets/images/logo.png" alt="logoFable">
     <nav class="flex-row">
-      <!-- <a href="" class="flex-col">
-        <img src="../assets/img/home.png" alt="icn">
-        <span>Home</span>
-      </a> -->
 
-      <!-- dynamic navLink.. to add dinamic links to page sections -->
-      <a v-for="(navLink, i) in navLinks" :key="i" href="#" class="flex-col"
+      <!-- dynamic navLink from data -->
+      <!-- the @mouse are used to change to hover tracker-->
+      <a v-for="(navLink, i) in navLinks" :key="i" :href="navLink.idTag" class="flex-col"
         @mouseover="navLink.hover = true"
         @mouseleave="navLink.hover = false"
         >
+        <!-- if hover -->
         <img v-if="navLink.hover" :src="navLink.imgHover" :alt="navLink.text">
+        <!-- if else -->
         <img v-else :src="navLink.img" :alt="navLink.text">
-        <span>{{navLink.text}}</span>
-         
+        <span>{{navLink.text}}</span>   
       </a>
-
     </nav>
   </div>
 </template>
@@ -25,8 +22,6 @@
 <script>
 export default {
   name: 'MyHeader',
-
-
   data() {
     return {
       navLinks: [
@@ -35,46 +30,50 @@ export default {
           img: require("../assets/img/home.png"),
           imgHover: require("../assets/img/home-2.png"),
           hover: false,
+          idTag : "#",
         },
         {
           text: "Pages",
           img: require("../assets/img/document.png"),
           imgHover: require("../assets/img/document-2.png"),
           hover: false,
+          idTag : "#welcomeToFable",
         },
         {
           text: "Blog",
           img: require("../assets/img/printer.png"),
           imgHover: require("../assets/img/printer-2.png"),
           hover: false,
+          idTag : "#whatIsNew",
         },
         {
           text: "Shop",
           img: require("../assets/img/cart.png"),
           imgHover: require("../assets/img/cart-2.png"),
           hover: false,
+          idTag : "#",
         },
         {
           text: "Shortcodes",
           img: require("../assets/img/lab.png"),
           imgHover: require("../assets/img/lab-2.png"),
           hover: false,
+          idTag : "#ourClasses",
         },
         {
           text: "Support",
           img: require("../assets/img/chat.png"),
           imgHover: require("../assets/img/chat-2.png"),
           hover: false,
+          idTag : "#",
         },
         {
           text: "Contact",
           img: require("../assets/img/envelope.png"),
           imgHover: require("../assets/img/envelope-2.png"),
           hover: false,
+          idTag : "#contactUs",
         }
-
-
-
       ]
     }
   }
