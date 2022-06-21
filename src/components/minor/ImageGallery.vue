@@ -30,7 +30,7 @@
 
         </div>
         <div class="bottom flex-row">
-                <div v-for="(item, i) in quoteList" :key="i" class="rectangle" :class="i === activeQuote ? 'rectangle-up' : '' " ></div>
+                <div v-for="(item, i) in quoteList" :key="i" class="rectangle" :class="i === activeQuote ? 'rectangle-up' : '' " @click="onClick(i)"></div>
                 <!-- non sapevo come fare e quindi ho letteralmenteo fatto copia e incolla, modificando dove necessario ed ha funzionato xD -->
 
         </div>
@@ -96,15 +96,13 @@ export default {
   methods: {
     nextQuote(){
                 this.activeQuote++;
-
-                // let index= this.activeQuote;
-                // this.quoteList[index].visible = true;
-                // console.log(this.quoteList[index].visible);
-
                 if(this.activeQuote > this.quoteList.length - 1){
                     this.activeQuote = 0;      
-                } 
+                }    
             },
+    onClick(activeQuote){
+                this.activeQuote = activeQuote;
+                },
   }
    
 }
@@ -206,6 +204,9 @@ setInterval(() => {
     width: 40px;
     height: 12px;
     border: 2px solid $white;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .rectangle-up {
     margin-bottom: 30px;
